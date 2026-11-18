@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c1l876upm8vcu"]
+
+[ext_resource type="Texture2D" uid="uid://da5rhj3m810j5" path="res://assets/background_city.png" id="1_oabld"]
+
+[node name="Parallax2D" type="Parallax2D" unique_id=1278321024]
+repeat_size = Vector2(1800, 1200)
+autoscroll = Vector2(-100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1069215335]
+texture = ExtResource("1_oabld")

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bcs6sq3152lja"]
+
+[ext_resource type="PackedScene" uid="uid://c1l876upm8vcu" path="res://background.tscn" id="1_5gx2l"]
+[ext_resource type="PackedScene" uid="uid://bf2kyoknslwie" path="res://player/character_body_2d.tscn" id="1_7lnir"]
+
+[sub_resource type="GDScript" id="GDScript_5gx2l"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2j2n6"]
+distance = -182.0
+
+[node name="Node2D" type="Node2D" unique_id=1750160417]
+script = SubResource("GDScript_5gx2l")
+
+[node name="Parallax2D" parent="." unique_id=1278321024 instance=ExtResource("1_5gx2l")]
+
+[node name="CharacterBody2D" parent="." unique_id=1860237018 instance=ExtResource("1_7lnir")]
+position = Vector2(6, -151)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=838040968]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=102347048]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=336775008]
+shape = SubResource("WorldBoundaryShape2D_2j2n6")
